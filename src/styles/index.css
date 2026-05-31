@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-from: #3b82f6;
+  --brand-via: #06b6d4;
+  --brand-to: #8b5cf6;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #faf5ff 50%, #ecfeff 100%);
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgba(59,130,246,0.08)];
+  }
+  .brand-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600;
+  }
+  .brand-bg {
+    @apply bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600;
+  }
+  .soft-shadow {
+    box-shadow: 0 10px 30px -10px rgba(59,130,246,0.25);
+  }
+  .glow-shadow {
+    box-shadow: 0 0 40px rgba(99,102,241,0.35);
+  }
+  .section { @apply py-20 md:py-28; }
+}
